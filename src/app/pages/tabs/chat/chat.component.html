@@ -1,0 +1,22 @@
+<StackLayout class="chat-user">
+  <ListView
+    [items]="users"
+    (itemTap)="onItemTap($event)"
+    style="height: 100%"
+  >
+    <ng-template let-user="item">
+      <FlexboxLayout
+        flexDirection="row"
+        justifyContent="space-between"
+        [nsRouterLink]="['/chat-user', user.user_uid]"
+      >
+        <Image src="res://user" class="thumb img-circle"> </Image>
+        <Label
+          [text]="user.email"
+          class="t-12 color-black"
+          TextAlignment="right"
+        ></Label>
+      </FlexboxLayout>
+    </ng-template>
+  </ListView>
+</StackLayout>

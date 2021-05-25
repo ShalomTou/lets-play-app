@@ -1,0 +1,23 @@
+<!-- <ActionBar title="{N} Geolocation Example"></ActionBar> -->
+<FlexboxLayout>
+    <StackLayout class="feed">
+        <GridLayout rows="auto" columns="300, 50,15"
+            style="border-width: 2;border-color: 000;border-radius: 20; margin:10;" (tap)="createPost()">
+            <Label text="Create a new event" row="0" col="0"
+                style="text-align:center ;font-size: 20px; margin-top: 2%;"></Label>
+            <Button class="add-post fa-solid" text="&#xf0fe;" row="0" col="1" (tap)="addPost()"></Button>
+        </GridLayout>
+        <ScrollView height="650">
+            <ListView [items]="feedList" (loaded)="loadFeed()" class="list-group ">
+                <ng-template let-item="item" let-odd="odd" let-even="even">
+                    <StackLayout>
+                        <GridLayout rows="30, *, *" columns="5,*,5" class="feed-box">
+                            <Image [src]="item.image" row="1" col="1" class="feed-image"></Image>
+                            <Label [text]="item.context" row="2" col="1" class="feed-context" textWrap="true"></Label>
+                        </GridLayout>
+                    </StackLayout>
+                </ng-template>
+            </ListView>
+        </ScrollView>
+    </StackLayout>
+</FlexboxLayout>

@@ -1,0 +1,92 @@
+<ScrollView orientation="vertical" class="page">
+    <StackLayout class="form" [ngSwitch]="labelPicker">
+        <StackLayout *ngSwitchDefault>
+            <Image src="~/app/assets/exercise.png" class="logo logo-img "></Image>
+            <Label class="logo title" text="LETS PLAY"></Label>
+
+            <!-- LOGIN -->
+            <Label text="Login" textWrap="true" class="sub-title"></Label>
+
+            <!-- Form Control -->
+            <StackLayout class="form-container">
+                <!-- Email -->
+                <TextField hint="Email" class="input" keyboardType="email" [(ngModel)]="this.user.email">
+                </TextField>
+                <StackLayout class="hr-light"></StackLayout>
+
+                <!-- Password -->
+                <TextField hint="Password" class="input" secure="true" [(ngModel)]="this.user.password">
+                </TextField>
+                <StackLayout class="hr-light"></StackLayout>
+
+                <!-- Login -->
+                <Button text="Login" class="btn btn-login" (tap)="loginButton()"></Button>
+
+                <!-- SignIn -->
+                <Button text="Sign In" class="btn  " (tap)="showRegister()"></Button>
+
+                <!-- Forgot Pass -->
+                <Label text="Forgot Password?" class="forgot_password m-t-30 " (tap)="showForgotPass()"></Label>
+            </StackLayout>
+        </StackLayout>
+
+        <!-- FORGOT PASS -->
+        <StackLayout *ngSwitchCase="'forgot_password'">
+
+            <Image src="~/app/assets/exercise.png" class="logo logo-img "></Image>
+            <Label class="logo title" text="LETS PLAY"></Label>
+            <Label text="Forgot Password" textWrap="true" class="sub-title"></Label>
+
+            <StackLayout class="form-container">
+                <TextField hint="Email" class="input item-form" keyboardType="email" [(ngModel)]="this.user.email">
+                </TextField>
+                <StackLayout class="hr-light"></StackLayout>
+                <Button text="Send Email" class="btn btn-login m-t-20 " (tap)="forgotPassword()"></Button>
+            </StackLayout>
+            <Label text="Back" class="back" (tap)="goBackLogin()"></Label>
+        </StackLayout>
+
+        <!-- REGISTER -->
+        <StackLayout *ngSwitchCase="'register'">
+            <Image src="~/app/assets/exercise.png" class="logo logo-img "></Image>
+            <Label class="logo title" text="LETS PLAY"></Label>
+            <Label text="Register" textWrap="true" class="sub-title-register"></Label>
+            <!-- Form Control -->
+            <StackLayout class="form-container">
+                <TextField hint="Email" class="input item-form" keyboardType="email" [(ngModel)]="this.user.email">
+                </TextField>
+                <StackLayout class="hr-light"></StackLayout>
+
+                <!-- Password -->
+                <TextField hint="Password" class="input item-form" secure="true" [(ngModel)]="this.user.password">
+                </TextField>
+                <StackLayout class="hr-light"></StackLayout>
+
+                <!-- Check Password -->
+                <TextField hint="Check Password" class="input item-form" secure="true"
+                    [(ngModel)]="this.user.check_password"></TextField>
+                <StackLayout class="hr-light"></StackLayout>
+
+                <!-- FirstNAme -->
+                <TextField hint="First Name" class="input item-form" secure="false"
+                    [(ngModel)]="this.user.user_first_name"></TextField>
+                <StackLayout class="hr-light"></StackLayout>
+
+                <!-- LAstname -->
+                <TextField hint="Last Name" class="input item-form" secure="false"
+                    [(ngModel)]="this.user.user_last_name"></TextField>
+                <StackLayout class="hr-light"></StackLayout>
+
+                <!-- Username -->
+                <TextField hint="User Name" class="input item-form" secure="false"
+                    [(ngModel)]="this.user.user_username"></TextField>
+                <StackLayout class="hr-light"></StackLayout>
+
+                <!-- Buttons -->
+                <Button text="Create Account" class="btn btn-login m-t-20 " (tap)="createAccountButton()"></Button>
+                <Label text="Back" class="back" (tap)="goBackLogin()"></Label>
+
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ScrollView>

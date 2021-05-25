@@ -1,0 +1,29 @@
+<StackLayout>
+  <ListView height="87%" [items]="chats">
+    <ng-template let-item="item">
+      <StackLayout>
+        <Label
+          [text]="userName(item)"
+        ></Label>
+        <Label [text]="item.message"></Label>
+      </StackLayout>
+    </ng-template>
+  </ListView>
+  <StackLayout height="13%">
+    <GridLayout columns="*,auto" style="padding: 10">
+      <TextField
+        textfieldclass="chatTextField"
+        row="0"
+        col="0"
+        [(ngModel)]="message"
+      ></TextField>
+      <Button
+        btnclass="chatBtn"
+        row="0"
+        col="1"
+        text="send"
+        (tap)="addMessage()"
+      ></Button>
+    </GridLayout>
+  </StackLayout>
+</StackLayout>

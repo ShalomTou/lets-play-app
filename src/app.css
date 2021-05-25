@@ -1,0 +1,216 @@
+/*
+In NativeScript, the app.css file is where you place CSS rules that
+you would like to apply to your entire application. Check out
+http://docs.nativescript.org/ui/styling for a full list of the CSS
+selectors and properties you can use to style UI components.
+
+/*
+In many cases you may want to use the NativeScript core theme instead
+of writing your own CSS rules. You can learn more about the
+NativeScript core theme at https://github.com/nativescript/theme
+The imported CSS rules must precede all other types of rules.
+*/
+@import "~@nativescript/theme/css/core.css";
+@import "~@nativescript/theme/css/default.css";
+
+/* Place any CSS rules you want to apply on both iOS and Android here.
+This is where the vast majority of your CSS code goes. */
+
+/*
+The following CSS rule changes the font size of all Buttons that have the
+"-primary" class modifier.
+*/
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  color: #010101;
+}
+
+Button.-primary {
+  font-size: 18;
+}
+
+/* this is the font awsome */
+
+.fa-brands {
+  font-family: "Font Awesome 5 Brands Regular", "fa-brands-400";
+}
+
+.fa-regular {
+  font-family: "Font Awesome 5 Free Regular", "fa-regular-400";
+  font-weight: 400;
+}
+
+.fa-solid {
+  font-family: "Font Awesome 5 Free Solid", "fa-solid-900";
+  font-weight: 900;
+}
+
+/* untill here! */
+
+.page {
+  /* align-items: flex-start;
+    background-color: rgb(255, 255, 255); */
+  background-image: url("~/app/assets/background2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: whitesmoke;
+}
+
+.form {
+  margin-left: 30;
+  margin-right: 30;
+  flex-grow: 2;
+  vertical-align: middle;
+  color: whitesmoke;
+}
+
+.feed {
+  /* flex-grow: 2; */
+  vertical-align: middle;
+  color: black;
+}
+
+.feed-context {
+  text-align: center;
+  font-size: 14;
+  font-style: italic;
+  color: black;
+}
+
+.logo {
+  margin-top: 5%;
+  height: 100;
+  text-align: center;
+  font-weight: 400;
+  font-family: monospace;
+  color: #010101;
+}
+
+.logo-img {
+  margin-top: 6%;
+}
+
+.title {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 65;
+  color: #010101;
+}
+
+.sub-title {
+  horizontal-align: center;
+  font-size: 25;
+  font-weight: 200;
+  margin-bottom: 10;
+  text-align: center;
+  color: #010101;
+  text-transform: capitalize;
+  height: auto;
+}
+
+.sub-title-register {
+  horizontal-align: center;
+  font-size: 25;
+  font-weight: 200;
+  /* margin-bottom: 10; */
+  text-align: center;
+  color: black;
+  height: auto;
+}
+
+.btn {
+  font-size: 18;
+  align-items: center;
+  background-color: rgb(248, 245, 245);
+  border-radius: 70px;
+  display: flex;
+  height: 45;
+  justify-content: center;
+  margin-right: 4rem;
+  width: 200;
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-login {
+  width: 250;
+}
+
+.forgot_password {
+  font-size: 14;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.f-s-35 {
+  font-size: 35;
+}
+
+.input {
+  font-size: 16;
+  color: rgba(0, 0, 0, 0.767);
+  padding-left: 5;
+}
+
+.input.item-form {
+  font-size: 16;
+  color: rgba(0, 0, 0, 0.767);
+  padding-left: 5;
+  margin: 0;
+}
+
+.label {
+  font-size: 20;
+  text-align: center;
+  color: black;
+}
+
+.feed-box {
+  background-color: rgba(209, 197, 197, 0.76);
+  border-radius: 5%;
+}
+
+.add-post {
+  font-size: 22;
+  width: 50;
+  margin-right: 80;
+}
+
+.details-input {
+  background: rgba(206, 204, 204, 0.637);
+  font-size: 18;
+  text-align: center;
+  border-radius: 5%;
+  color: rgba(0, 0, 0, 0.719);
+}
+
+.w-500 {
+  width: 500;
+}
+
+.picker {
+  background-color: white;
+  color: white;
+  border-color: white;
+  border-radius: 20;
+  border-width: 2;
+  width: 200;
+  height: 100;
+  vertical-align: middle;
+}
+
+.back {
+  border-radius: 50%;
+  background-color: #c1c1c1;
+  width: 300px;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 18px;
+  margin: 135px auto auto auto;
+  color: #010101;
+  opacity: 0.9;
+  height: auto;
+}
+

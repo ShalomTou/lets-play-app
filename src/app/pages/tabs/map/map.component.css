@@ -1,0 +1,32 @@
+/* Add mobile styles for the component here.  */
+.title {
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #ffffff;
+}
+
+.f-s-48 {
+    font-size: 48px;
+}
+
+.users-container {
+    height: 50;
+    max-height: 50;
+    /* scroll-behavior: auto; */
+    overflow: scroll;
+}
+
+.test {
+    width: 850px;
+    max-width: 850px;
+    overflow: scroll;
+    /* scroll-behavior: auto; */
+}
+
+.image-active {
+    border-width: 3;
+    border-color: orangered;
+    border-radius: 20;
+}

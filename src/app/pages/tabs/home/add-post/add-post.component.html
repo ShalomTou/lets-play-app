@@ -1,0 +1,36 @@
+<StackLayout class="page" width="300" height="550" style="border-radius: 5%;">
+    <Label text="Open Event" class="sub-title" textWrap="true" style="margin-top: 5%;margin-bottom: 0;"></Label>
+    <label text="what do oyu want to do now?">
+    </label>
+    <GridLayout rows="*, *, *" columns="*, *, *">
+        <CheckBox #CB2 row="0" col="0" text="CheckBox Label" checked="false"></CheckBox>
+        <Label text="0, 1" row="0" col="1"></Label>
+        <Label text="0, 2" row="0" col="2"></Label>
+        <Label text="1, 0" row="1" col="0"></Label>
+        <Label text="1, 1" row="1" col="1"></Label>
+        <Label text="1, 2" row="1" col="2"></Label>
+        <Label text="2, 0" row="2" col="0"></Label>
+        <Label text="2, 1" row="2" col="1"></Label>
+        <Label text="2, 2" row="2" col="2"></Label>
+    </GridLayout>
+    <CheckBox #CB1 text="CheckBox Label" checked="false"></CheckBox>
+    <button (tap)="toggleCheck()" text="Toggle it!"></button>
+    <button (tap)="getCheckProp()" text="Check Property"></button>
+
+
+
+    <!-- <GridLayout rows=" *, 75" columns="15,*,15">
+        <GridLayout rows="*" columns="*"
+            style="border-width: 2;border-color: 000;border-radius: 20; margin:2;background: white;" row="0" col="1">
+            <TextField hint="Open a new event" row="0" col="0" (ngModel)]="this.feedList.context" class="input"
+                style="placeholder-color: black;width: max-content;color: black;"></TextField>
+            <Button text="&#xf03e;" class="fa-regular add-post" row="0" col="0"
+                style="width: 50; margin-left: 290;margin-bottom: 120;" (tap)="pickImage()"></Button>
+        </GridLayout>
+        <Button row="1" col="1" text="Post" textWrap="true" class="btn"
+            style="background:rgb(236, 234, 234);text-align: center;padding-top: 3;margin-right: 105; width: 150;border-radius: 8%;"></Button>
+        <Button row="1" col="1" text="Cancel" textWrap="true" class="btn"
+            style="width:70;background:rgb(231, 212, 212);text-align: center;padding-top: 3;margin-left:185;width: 70;border-radius: 8%;"
+            (tap)="closeDialog()"></Button>
+    </GridLayout> -->
+</StackLayout>
